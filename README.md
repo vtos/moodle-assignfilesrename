@@ -9,12 +9,9 @@ The plugin requires Moodle version 2020061500 which is Moodle 3.9 (Build: 202006
 The basic process as for any Moodle plugin. As this is a local type of plugin you place the plugin folder into the '/local' path of your Moodle and log in as an administrator. The plugin will offer to set it up during the installation process. This is just a matter of ticking the 'Enable' box to enable/disable the plugin (i.e. handling of the assign file uploading events). The setting can be set at any time in the administration section of Moodle.
 
 ### Rules for renaming of the assign uploaded files
-The pattern for a renamed file is the following (the requirements were provided by the customer):
-**{course shortname}\_{user lastname}\_{first letter of firstname}\_{date in the 'dmY' format}\_{time in 'HMS' format}**.
+The pattern for a renamed file is the following (the requirements were provided by the customer):<br />**{course shortname}\_{user lastname}\_{first letter of firstname}\_{date in the 'dmY' format}\_{time in 'HMS' format}**.<br />
 The date and time are referenced in the PHP's 'strftime' format, see https://www.php.net/manual/en/function.strftime.php.
-The example file name after renaming: **math101_Doe_J_22122020_210436.pdf**.
-The plugin is capable of adding numbers to a file name after renaming if a file with this exact name is already exists in the same assign file area. The renamed file would have the name like
-**math101_Doe_J_22122020_210436(1).pdf** in that case.
+<br />The example file name after renaming:<br />**math101_Doe_J_22122020_210436.pdf**.<br />The plugin is capable of adding numbers to a file name after renaming if a file with this exact name is already exists in the same assign file area. In that case the renamed file would have the name like:<br />**math101_Doe_J_22122020_210436(1).pdf**.
 
 ### Unit testing
 The plugin bundles with unit tests to test composing of a file name and actual renaming of assign files in Moodle file system.
